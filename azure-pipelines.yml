@@ -20,6 +20,7 @@ steps:
 - bash: |
     curl $BEDROCK_BUILD_SCRIPT > build.sh
     chmod +x ./build.sh
+    pwd
   displayName: Download Bedrock orchestration script
   env:
     BEDROCK_BUILD_SCRIPT: https://raw.githubusercontent.com/microsoft/bedrock/master/gitops/azure-devops/build.sh
