@@ -17,6 +17,11 @@ steps:
     #sshPassphrase: # Optional
     sshKeySecureFile: rings
 
+- task: Bash@3
+  inputs:
+    targetType: inline
+    script: 'git clone git@github.com:bnookala/hello-rings.git' 
+
 - bash: |
     curl $BEDROCK_BUILD_SCRIPT > build.sh
     chmod +x ./build.sh
