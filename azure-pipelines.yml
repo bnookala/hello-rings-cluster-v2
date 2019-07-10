@@ -18,15 +18,6 @@ steps:
     sshKeySecureFile: rings
 
 - bash: |
-    mkdir ydawgie
-    cd ydawgie
-    git clone git@github.com:bnookala/hello-rings.git
-    cd hello-rings
-    echo "LISTING CONTENT OF HELLO-RINGS REPO:"
-    ls -a
-  displayName: test git clone with ssh
-
-- bash: |
     curl $BEDROCK_BUILD_SCRIPT > build.sh
     chmod +x ./build.sh
   displayName: Download Bedrock orchestration script
@@ -42,6 +33,12 @@ steps:
     VERIFY_ONLY: 1
 
 - bash: |
+    mkdir ydawgie
+    cd ydawgie
+    git clone git@github.com:bnookala/hello-rings.git
+    cd hello-rings
+    echo "LISTING CONTENT OF HELLO-RINGS REPO:"
+    ls -a
     . build.sh
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
