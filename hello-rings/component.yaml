@@ -3,43 +3,43 @@ type: component
 subcomponents:
 - name: hello-rings-featurea
   type: component
-  source: https://github.com/bnookala/hello-rings
+  source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: featurea
 - name: hello-rings-featureb
   type: component
-  source: https://github.com/bnookala/hello-rings
+  source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: featureb
 - name: hello-rings-featurex
   type: component
-  source: https://github.com/bnookala/hello-rings
+  source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: featurex
 - name: hello-rings-featurey
   type: component
-  source: https://github.com/bnookala/hello-rings
+  source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: featurey
 - name: hello-rings-featureydawgie
   type: component
-  source: https://github.com/bnookala/hello-rings
+  source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: featureydawgie
 - name: hello-rings-featurez
   type: component
-  source: https://github.com/bnookala/hello-rings
+  source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: featurez
 - name: hello-rings-master
   type: component
-  source: https://github.com/bnookala/hello-rings
+  source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: master
