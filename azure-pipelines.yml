@@ -21,6 +21,9 @@ steps:
     mkdir ydawgie
     cd ydawgie
     git clone git@github.com:bnookala/hello-rings.git
+    ls -a
+    cd ..
+    ls -a
   displayName: test git clone with ssh
 
 - bash: |
