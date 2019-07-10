@@ -41,10 +41,9 @@ steps:
   env:
     VERIFY_ONLY: 1
 
-- task: ShellScript@2
+- bash: |
+    . build.sh
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
-  inputs:
-    scriptPath: build.sh
   condition: ne(variables['Build.Reason'], 'PullRequest')
   env:
     COMMIT_MESSAGE: $(Build.SourceVersionMessage)
