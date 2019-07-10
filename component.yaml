@@ -1,0 +1,8 @@
+name: hello-rings-cluster
+subcomponents:
+- name: hello-rings
+  type: component
+  path: hello-rings
+- name: ring-operator
+  type: component
+  path: ring-operator

@@ -1,0 +1,9 @@
+name: "ring-operator"
+subcomponents:
+  - name: "ring"
+    type: "static"
+    path: "./ring"
+  - name: "traefik"
+    type: "static"
+    path: "./traefik"
+
