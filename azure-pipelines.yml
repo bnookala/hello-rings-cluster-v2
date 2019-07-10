@@ -21,8 +21,7 @@ steps:
     mkdir ydawgie
     cd ydawgie
     git clone git@github.com:bnookala/hello-rings.git
-    ls -a
-    cd ..
+    echo "LISTING CONTENT OF HELLO-RINGS REPO:"
     ls -a
   displayName: test git clone with ssh
 
