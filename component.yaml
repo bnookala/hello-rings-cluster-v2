@@ -5,4 +5,4 @@ subcomponents:
   source: hello-rings
 - name: ring-operator
   type: component
-  pasourceth: ring-operator
+  source: ring-operator
