@@ -10,13 +10,6 @@ steps:
   persistCredentials: true
   clean: true
 
-- task: InstallSSHKey@0
-  inputs:
-    knownHostsEntry: github.com,192.30.255.113 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
-    sshPublicKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfGOD61AfDXCVMO588U03T7vI/zQ8cEUscdpx+7fABh6EmWsoNjWiAiSOn8crs7UuDONBtxl0vg3y+oa3LM3oVgHEFJ64lTXYdtx/UfhsZe0qnXYW8+AbVhMsKvSHLTb8gposa5bdL+Fk4R73XVV2DVgk+HM7TEey8IWBLR38iu9B2a13xo0H8v9guEeP8OfKwNZTxSpq94W14sMnCYVkEqW4ce9bnD69xjIjM/5Q5r3RIOVPKj3oiLZgC9s3GftpldzE6MyvDKAkyNiJsp8SHc3Jwzf+SbngMz67uBMcyAMrS/xT1YxOCp0N18aZegk/igZWQq7snOTqxyjZgrdcP yvonneradsmikham@Yvonnes-MacBook-Pro-2.local
-    #sshPassphrase: # Optional
-    sshKeySecureFile: rings
-
 - bash: |
     mkdir ydawgie
     cd ydawgie
