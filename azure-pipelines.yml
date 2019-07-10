@@ -39,7 +39,8 @@ steps:
     cd hello-rings
     echo "LISTING CONTENT OF HELLO-RINGS REPO:"
     ls -a
-    cd ..
+    cd $HOME
+    ls 
     . build.sh
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
