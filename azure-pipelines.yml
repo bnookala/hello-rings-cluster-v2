@@ -34,6 +34,7 @@ steps:
     VERIFY_ONLY: 1
 
 - bash: |
+    echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
     mkdir ydawgie
     cd ydawgie
     git clone git@github.com:bnookala/hello-rings.git
@@ -41,7 +42,15 @@ steps:
     echo "LISTING CONTENT OF HELLO-RINGS REPO:"
     ls -a
     cd /home/vsts/work/1/s
-    . build.sh
+    echo "--------------------------RUN RAW BUILD.SH-----------------------------"
+    . build.sh --source-only
+    init
+    helm init
+    get_fab_version
+    get_os
+    download_fab
+    install_hld
+    install_fab
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
   env:
