@@ -36,13 +36,13 @@ steps:
 - bash: |
     #cp -r ./* "$HOME/"
     #cd $HOME
-    #echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
-    #mkdir ydawgie
-    #cd ydawgie
-    #git clone git@github.com:bnookala/hello-rings.git
-    #cd hello-rings
-    #echo "LISTING CONTENT OF HELLO-RINGS REPO:"
-    #ls -a
+    echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
+    mkdir ydawgie
+    cd ydawgie
+    git clone git@github.com:bnookala/hello-rings.git
+    cd hello-rings
+    echo "LISTING CONTENT OF HELLO-RINGS REPO:"
+    ls -a
     #cd $HOME
     . build.sh
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
