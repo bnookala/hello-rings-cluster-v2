@@ -34,16 +34,16 @@ steps:
     VERIFY_ONLY: 1
 
 - bash: |
-    cp -r ./* "$HOME/"
-    cd $HOME
-    echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
-    mkdir ydawgie
-    cd ydawgie
-    git clone git@github.com:bnookala/hello-rings.git
-    cd hello-rings
-    echo "LISTING CONTENT OF HELLO-RINGS REPO:"
-    ls -a
-    cd $HOME
+    #cp -r ./* "$HOME/"
+    #cd $HOME
+    #echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
+    #mkdir ydawgie
+    #cd ydawgie
+    #git clone git@github.com:bnookala/hello-rings.git
+    #cd hello-rings
+    #echo "LISTING CONTENT OF HELLO-RINGS REPO:"
+    #ls -a
+    #cd $HOME
     . build.sh
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
@@ -51,3 +51,4 @@ steps:
     COMMIT_MESSAGE: $(Build.SourceVersionMessage)
     REPO: "https://github.com/bnookala/hello-rings-cluster-materialized"
     BRANCH_NAME: $(Build.SourceBranchName)
+    FAB_VERSION: 0.12.0
