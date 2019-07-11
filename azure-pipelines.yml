@@ -34,6 +34,8 @@ steps:
     VERIFY_ONLY: 1
 
 - bash: |
+    cp -r ./* "$HOME/"
+    cd "$HOME"
     echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
     mkdir ydawgie
     cd ydawgie
@@ -46,8 +48,8 @@ steps:
     wget "https://github.com/Microsoft/fabrikate/releases/download/0.14.2/fab-v0.14.2-linux-amd64.zip"
     unzip fab-v0.14.2-linux-amd64.zip -d fab
     export PATH=$PATH:$HOME/fab
-    pwd
-    ls
+    git clone https://github.com/bnookala/hello-rings-cluster-v2
+    cd hello-rings-cluster-v2
     fab install
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
