@@ -13,6 +13,12 @@ subcomponents:
   method: git
   path: ring
   branch: featureb
+- name: hello-rings-featurec
+  type: component
+  source: https://github.com/bnookala/hello-rings
+  method: git
+  path: ring
+  branch: featurec
 - name: hello-rings-featurex
   type: component
   source: git@github.com:bnookala/hello-rings.git
