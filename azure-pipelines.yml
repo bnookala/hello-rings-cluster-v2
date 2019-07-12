@@ -38,13 +38,13 @@ steps:
     cp -r ./* "$HOME/"
     cd $HOME
     echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
-    mkdir ydawgie
-    cd ydawgie
-    git clone git@github.com:bnookala/hello-rings.git
-    cd hello-rings
-    echo "LISTING CONTENT OF HELLO-RINGS REPO:"
-    ls -a
-    cd $HOME
+    #mkdir ydawgie
+    #cd ydawgie
+    #git clone git@github.com:bnookala/hello-rings.git
+    #cd hello-rings
+    #echo "LISTING CONTENT OF HELLO-RINGS REPO:"
+    #ls -a
+    #cd $HOME
     echo "-----------------------KNOWN HOSTS FILE-----------------------"
     cat .ssh/known_hosts
     echo "--------------------------RUN RAW BUILD.SH-----------------------------"
@@ -56,9 +56,11 @@ steps:
     cd hello-rings-cluster-v2
     fab install
     echo $SHLVL
+    cat .ssh/known_hosts
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
   env:
     COMMIT_MESSAGE: $(Build.SourceVersionMessage)
     REPO: "https://github.com/bnookala/hello-rings-cluster-materialized"
     BRANCH_NAME: $(Build.SourceBranchName)
+    VERSION: 0.12.0
