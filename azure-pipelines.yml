@@ -47,7 +47,7 @@ steps:
     echo "-----------------------KNOWN HOSTS FILE-----------------------"
     cat .ssh/known_hosts
     echo "--------------------------RUN RAW BUILD.SH-----------------------------"
-    wget "https://github.com/Microsoft/fabrikate/releases/download/fix-private-repos/fab-vfix-private-1-linux-amd64.zip"
+    wget "https://github.com/evanlouie/fabrikate/releases/download/fix-private-repos/fab-vfix-private-1-linux-amd64.zip"
     unzip fab-vfix-private-1-linux-amd64.zip -d fab
     export PATH=$PATH:$HOME/fab
     git clone https://github.com/bnookala/hello-rings-cluster-v2
