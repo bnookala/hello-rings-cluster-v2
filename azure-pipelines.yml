@@ -45,7 +45,7 @@ steps:
     ls -a
     cd $HOME
     echo "-----------------------KNOWN HOSTS FILE-----------------------"
-    cat .ssh/known_hosts
+    #cat .ssh/known_hosts
     echo "--------------------------RUN RAW BUILD.SH-----------------------------"
     wget "https://github.com/evanlouie/fabrikate/releases/download/fix-private-repos/fab-vfix-private-1-linux-amd64.zip"
     unzip fab-vfix-private-1-linux-amd64.zip -d fab
@@ -53,7 +53,6 @@ steps:
     git clone https://github.com/bnookala/hello-rings-cluster-v2
     cd hello-rings-cluster-v2
     fab install
-    cat .ssh/known_hosts
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
   env:
