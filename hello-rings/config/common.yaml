@@ -1,4 +1,15 @@
 subcomponents:
+  Build:
+    subcomponents:
+      BuildId:
+        config:
+          branchName: master
+          buildDate: "2019-07-17T21:39:36.7174973Z"
+          buildId: "5239"
+          commitId: 7c998ada452f1013e0a1f08acab81a6d35e730b2
+          image:
+            repository: hellorings.azurecr.io/hellorings
+            tag: hello-rings-master-5239
   hello-rings-featurea:
     config:
       branchName: featurea
