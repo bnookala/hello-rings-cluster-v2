@@ -34,29 +34,11 @@ steps:
     VERIFY_ONLY: 1
 
 - bash: |
-    cp -r ./* "$HOME/"
-    cd $HOME
-    #echo "-----------------------TESTING GIT CLONE VIA SSH-----------------------"
-    #mkdir ydawgie
-    #cd ydawgie
-    #git clone git@github.com:bnookala/hello-rings.git
-    #cd hello-rings
-    #echo "LISTING CONTENT OF HELLO-RINGS REPO:"
-    #ls -a
-    #cd $HOME
-    #echo "-----------------------KNOWN HOSTS FILE-----------------------"
-    #cat .ssh/known_hosts
-    echo "--------------------------RUN RAW BUILD.SH-----------------------------"
-    wget "https://github.com/evanlouie/fabrikate/releases/download/fix-private-repos/fab-vfix-private-1-linux-amd64.zip"
-    unzip fab-vfix-private-1-linux-amd64.zip -d fab
-    export PATH=$PATH:$HOME/fab
-    git clone https://github.com/bnookala/hello-rings-cluster-v2
-    cd hello-rings-cluster-v2
-    fab install
+    . build.sh
   displayName: Transform fabrikate definitions and publish to YAML manifests to repo
   condition: ne(variables['Build.Reason'], 'PullRequest')
   env:
     COMMIT_MESSAGE: $(Build.SourceVersionMessage)
     REPO: "https://github.com/bnookala/hello-rings-cluster-materialized"
     BRANCH_NAME: $(Build.SourceBranchName)
-    VERSION: "0.12.0"
+    VERSION: "0.15.1"
