@@ -45,7 +45,7 @@ subcomponents:
   branch: featurez
 - name: hello-rings-master
   type: component
-  source: git@github.com:bnookala/hello-rings.git
+  source: https://github.com/bnookala/hello-rings
   method: git
   path: ring
   branch: master
