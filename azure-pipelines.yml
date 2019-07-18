@@ -41,4 +41,4 @@ steps:
     COMMIT_MESSAGE: $(Build.SourceVersionMessage)
     REPO: "https://github.com/bnookala/hello-rings-cluster-materialized"
     BRANCH_NAME: $(Build.SourceBranchName)
-    VERSION: "0.15.1"
+    VERSION: "0.15.0"
