@@ -26,6 +26,15 @@ subcomponents:
       image:
         repository: hellorings.azurecr.io/hellorings
         tag: hello-rings-featurec-5012
+  hello-rings-featurex:
+    config:
+      branchName: featurex
+      buildDate: "2019-07-18T21:21:25.1144656Z"
+      buildId: "5335"
+      commitId: 63a52488aa3d0f8db8ea279689014556b0c9591e
+      image:
+        repository: hellorings.azurecr.io/hellorings
+        tag: hello-rings-featurex-5335
   hello-rings-featurez:
     config:
       branchName: featurez
