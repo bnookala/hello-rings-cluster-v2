@@ -1,6 +1,9 @@
 trigger:
 - master
 
+variables:
+- group: RINGS Environment variables
+
 pool:
   vmImage: 'Ubuntu-16.04'
 
