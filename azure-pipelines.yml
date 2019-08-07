@@ -3,6 +3,8 @@ trigger:
 
 variables:
 - group: RINGS Environment variables
+- name: repo
+  value: "https://github.com/bnookala/hello-rings-cluster-materialized"
 
 pool:
   vmImage: 'Ubuntu-16.04'
