@@ -5,6 +5,8 @@ variables:
 - group: RINGS Environment variables
 - name: REPO
   value: "https://github.com/bnookala/hello-rings-cluster-materialized"
+- name: VERSION
+  value: "0.15.1"
 
 pool:
   vmImage: 'Ubuntu-16.04'
