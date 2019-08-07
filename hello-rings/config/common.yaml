@@ -35,3 +35,12 @@ subcomponents:
       image:
         repository: hellorings.azurecr.io/hellorings
         tag: hello-rings-featurez-4949
+  hello-rings-master:
+    config:
+      branchName: master
+      buildDate: "2019-08-07T19:52:09.4352492Z"
+      buildId: "5610"
+      commitId: 0beb021debdef24520fb3bb077bcdf8221cecc72
+      image:
+        repository: hellorings.azurecr.io/hellorings
+        tag: hello-rings-master-5610
