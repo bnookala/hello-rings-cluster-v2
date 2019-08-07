@@ -19,30 +19,12 @@ subcomponents:
   method: git
   path: ring
   branch: featurec
-- name: hello-rings-featurex
-  type: component
-  source: git@github.com:bnookala/hello-rings.git
-  method: git
-  path: ring
-  branch: featurex
-- name: hello-rings-featurey
-  type: component
-  source: git@github.com:bnookala/hello-rings.git
-  method: git
-  path: ring
-  branch: featurey
 - name: hello-rings-featureydawgie
   type: component
   source: git@github.com:bnookala/hello-rings.git
   method: git
   path: ring
   branch: featureydawgie
-- name: hello-rings-featurez
-  type: component
-  source: git@github.com:bnookala/hello-rings.git
-  method: git
-  path: ring
-  branch: featurez
 - name: hello-rings-master
   type: component
   source: git@github.com:bnookala/hello-rings.git
