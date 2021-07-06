@@ -1,6 +1,12 @@
 name: hello-rings
 type: component
 subcomponents:
+- name: Build.BuildId
+  type: component
+  source: https://github.com/bnookala/hello-rings
+  method: git
+  path: ring
+  branch: Build.BuildId
 - name: hello-rings-featurea
   type: component
   source: git@github.com:bnookala/hello-rings.git
